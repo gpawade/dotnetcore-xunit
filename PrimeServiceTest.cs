@@ -1,4 +1,6 @@
 using System;
+using System.Threading;
+using System.Diagnostics;
 using Xunit;
 
 namespace dotnetElasticsearch
@@ -14,7 +16,7 @@ namespace dotnetElasticsearch
 
 
         [Fact]
-        [Trait("Category", "cat1")]
+        [Trait("Category", "unit")]
         [Trait("Priority", "1")]
         public void Test1()
         {
@@ -34,6 +36,7 @@ namespace dotnetElasticsearch
             var result = _primeService.IsPrime(value);
             Assert.False(result, $"{value} should not be prime");
         }
+        
     }
 
 
